@@ -50,3 +50,8 @@ Resumo Geral
 
     •	Entidades: Representam os objetos do domínio, como “Propriedade”, “Usuário”, “Contrato”.
     •	Casos de Uso: Definem como usuários e sistemas interagem com essas entidades para realizar objetivos específicos.
+
+
+---
+
+
