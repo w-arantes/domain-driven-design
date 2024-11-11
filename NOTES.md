@@ -1,3 +1,7 @@
+https://efficient-sloth-d85.notion.site/Gloss-rio-DDD-3a81b4df36d348a299ccbc53f38a1665
+
+---
+
 Entidade
 
 Uma entidade é uma abstração que representa um conceito ou objeto dentro de um domínio específico. Ela encapsula atributos e comportamentos relacionados àquele conceito, garantindo consistência e integridade de dados.
@@ -53,5 +57,4 @@ Resumo Geral
 
 
 ---
-
 
