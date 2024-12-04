@@ -5,11 +5,11 @@ import { makeQuestion } from 'test/factories/make-question'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { ChooseQuestionBestAnswerUseCase } from './choose-question-best-answer'
 
-describe('Choose Question Best Answer', () => {
-  let inMemoryAnswersRepository: InMemoryAnswersRepository
-  let inMemoryQuestionsRepository: InMemoryQuestionsRepository
-  let sut: ChooseQuestionBestAnswerUseCase
+let inMemoryAnswersRepository: InMemoryAnswersRepository
+let inMemoryQuestionsRepository: InMemoryQuestionsRepository
+let sut: ChooseQuestionBestAnswerUseCase
 
+describe('Choose Question Best Answer', () => {
   beforeEach(() => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository()
     inMemoryQuestionsRepository = new InMemoryQuestionsRepository()

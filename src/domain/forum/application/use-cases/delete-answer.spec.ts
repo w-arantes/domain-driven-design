@@ -1,12 +1,12 @@
 import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
-import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { makeAnswer } from 'test/factories/make-answer'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { DeleteAnswerUseCase } from './delete-answer'
 
-describe('Delete Answer', () => {
-  let inMemoryAnswersRepository: InMemoryAnswersRepository
-  let sut: DeleteAnswerUseCase
+let inMemoryAnswersRepository: InMemoryAnswersRepository
+let sut: DeleteAnswerUseCase
 
+describe('Delete Answer', () => {
   beforeEach(() => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository()
     sut = new DeleteAnswerUseCase(inMemoryAnswersRepository)

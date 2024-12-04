@@ -1,12 +1,12 @@
 import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
-import { EditAnswerUseCase } from './edit-answer'
 import { makeAnswer } from 'test/factories/make-answer'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { EditAnswerUseCase } from './edit-answer'
+
+let inMemoryAnswersRepository: InMemoryAnswersRepository
+let sut: EditAnswerUseCase
 
 describe('Edit Answer', () => {
-  let inMemoryAnswersRepository: InMemoryAnswersRepository
-  let sut: EditAnswerUseCase
-
   beforeEach(() => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository()
     sut = new EditAnswerUseCase(inMemoryAnswersRepository)

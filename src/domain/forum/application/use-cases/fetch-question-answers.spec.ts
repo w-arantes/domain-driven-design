@@ -3,10 +3,10 @@ import { makeAnswer } from 'test/factories/make-answer'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { FetchQuestionAnswersUseCase } from './fetch-question-answers'
 
-describe('Fetch Question Answers', () => {
-  let inMemoryAnswersRepository: InMemoryAnswersRepository
-  let sut: FetchQuestionAnswersUseCase
+let inMemoryAnswersRepository: InMemoryAnswersRepository
+let sut: FetchQuestionAnswersUseCase
 
+describe('Fetch Question Answers', () => {
   beforeEach(() => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository()
     sut = new FetchQuestionAnswersUseCase(inMemoryAnswersRepository)
