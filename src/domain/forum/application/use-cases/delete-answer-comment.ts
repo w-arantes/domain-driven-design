@@ -8,7 +8,10 @@ interface DeleteAnswerCommentUseCaseRequest {
   answerCommentId: string
 }
 
-type DeleteAnswerCommentUseCaseResponse = Either<ResourceNotFoundError | NotAllowedError, {}>
+type DeleteAnswerCommentUseCaseResponse = Either<
+  ResourceNotFoundError | NotAllowedError,
+  {}
+>
 
 export class DeleteAnswerCommentUseCase {
   constructor(private answerCommentsRepository: AnswerCommentsRepository) {}
@@ -24,6 +27,7 @@ export class DeleteAnswerCommentUseCase {
     if (!answerComment) {
       return left(new ResourceNotFoundError())
     }
+
     if (answerComment.authorId.toString() !== authorId) {
       return left(new NotAllowedError())
     }

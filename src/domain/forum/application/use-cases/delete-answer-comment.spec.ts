@@ -1,8 +1,8 @@
 import { InMemoryAnswerCommentsRepository } from 'test/repositories/in-memory-answer-comments-repository'
 import { makeAnswerComment } from 'test/factories/make-answer-comment'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { DeleteAnswerCommentUseCase } from '@/domain/forum/application/use-cases/delete-answer-comment'
 import { NotAllowedError } from '@/domain/forum/application/use-cases/error/not-allowed-error'
-import { DeleteAnswerCommentUseCase } from './delete-answer-comment'
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentsRepository
 let sut: DeleteAnswerCommentUseCase
@@ -14,7 +14,7 @@ describe('Delete Answer Comment', () => {
     sut = new DeleteAnswerCommentUseCase(inMemoryAnswerCommentsRepository)
   })
 
-  it('should be able to delete a question comment', async () => {
+  it('should be able to delete a answer comment', async () => {
     const answerComment = makeAnswerComment()
 
     await inMemoryAnswerCommentsRepository.create(answerComment)
