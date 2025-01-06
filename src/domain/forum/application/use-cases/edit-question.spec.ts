@@ -3,7 +3,7 @@ import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questio
 import { makeQuestion } from 'test/factories/make-question'
 import { makeQuestionAttachment } from 'test/factories/make-question-attachments'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
-import { NotAllowedError } from '@/domain/forum/application/use-cases/error/not-allowed-error'
+import { NotAllowedError } from '@/core/errors/not-allowed-error'
 import { EditQuestionUseCase } from './edit-question'
 
 let inMemoryQuestionsRepository: InMemoryQuestionsRepository

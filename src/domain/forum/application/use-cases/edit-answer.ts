@@ -5,8 +5,8 @@ import { AnswerAttachmentsRepository } from '@/domain/forum/application/reposito
 import { Answer } from '@/domain/forum/enterprise/entities/answer'
 import { AnswerAttachmentList } from '@/domain/forum/enterprise/entities/answer-attachment-list'
 import { AnswerAttachment } from '@/domain/forum/enterprise/entities/answer-attachment'
-import { ResourceNotFoundError } from '@/domain/forum/application/use-cases/error/resource-not-found-error'
-import { NotAllowedError } from '@/domain/forum/application/use-cases/error/not-allowed-error'
+import { ResourceNotFoundError } from '@/core/errors/resource-not-found-error'
+import { NotAllowedError } from '@/core/errors/not-allowed-error'
 
 interface EditAnswerUseCaseRequest {
   authorId: string

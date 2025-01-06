@@ -5,8 +5,8 @@ import { QuestionsRepository } from '@/domain/forum/application/repositories/que
 import { QuestionAttachmentsRepository } from '@/domain/forum/application/repositories/question-attachments-repository'
 import { QuestionAttachmentList } from '@/domain/forum/enterprise/entities/question-attachment-list'
 import { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment'
-import { NotAllowedError } from '@/domain/forum/application/use-cases/error/not-allowed-error'
-import { ResourceNotFoundError } from '@/domain/forum/application/use-cases/error/resource-not-found-error'
+import { NotAllowedError } from '@/core/errors/not-allowed-error'
+import { ResourceNotFoundError } from '@/core/errors/resource-not-found-error'
 
 interface EditQuestionUseCaseRequest {
   authorId: string

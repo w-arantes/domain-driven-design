@@ -3,7 +3,7 @@ import { InMemoryAnswerAttachmentsRepository } from 'test/repositories/in-memory
 import { makeAnswer } from 'test/factories/make-answer'
 import { makeAnswerAttachment } from 'test/factories/make-answer-attachments'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
-import { NotAllowedError } from '@/domain/forum/application/use-cases/error/not-allowed-error'
+import { NotAllowedError } from '@/core/errors/not-allowed-error'
 import { DeleteAnswerUseCase } from './delete-answer'
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository
