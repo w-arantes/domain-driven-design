@@ -1,4 +1,4 @@
-import { UniqueEntityId } from './unique-entity-id'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 
 export abstract class Entity<Props> {
   private _id: UniqueEntityId
@@ -11,5 +11,15 @@ export abstract class Entity<Props> {
   protected constructor(props: Props, id?: UniqueEntityId) {
     this.props = props
     this._id = id ?? new UniqueEntityId()
+  }
+
+  public equals(entity: Entity<any>) {
+    if (entity === this) {
+      return true
+    }
+    if (entity.id === this._id) {
+      return true
+    }
+    return false
   }
 }
